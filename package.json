@@ -18,5 +18,5 @@
     "passport-jwt": "*"
   },
   "author": "Tyler Eads",
-  "license": "ISC"
+  "license": "MIT"
 }
