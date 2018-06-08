@@ -1,11 +1,8 @@
-# Project Title
+![EadsGrphic](https://github.com/EadsGraphic/mean-stack-authentication/blob/master/readme-img.jpg)
 
-Interested in learning the MEAN.io stack at a deeper level and want to further explore this technology stack. The ultimate goal is to learn enough over the next several months to develop a working production grade web application that will generate a revenue stream as a proof of concept idea. Once the necessary skills are required, I want to deploy this application that solves a true problem in the world and hopefully make the next great application on a digital cloud provider for the world to consume. Along the way I hope to not only improve my MEAN.io skills, but I want to focus on overall UI/UX design as well to truly create an user rich experience.
+# EadsGraphic Authentication Demo Web App
 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Interested in learning the MEAN.io stack at a deeper level and want to further explore this technology. The ultimate goal is to learn enough over the next several months to develop a working production-grade web application that will generate a revenue stream as a proof of concept idea. Once the necessary skills are acquired, I want to deploy this application on a digital cloud provider for the world to consume. Along the way, I hope to not only improve my MEAN.io skills, but I want to focus on overall UI/UX design as well to truly create a user rich experience.
 
 ### Prerequisites
 
@@ -26,7 +23,7 @@ Tests will be available shortly as the project progresses.
 
 ## Deployment
 
-Deployment will come at a later date but will be hosted on either Firebase or Heroku
+The deployment will come at a later date but will be hosted on either Firebase or Heroku
 
 ## Built With
 
@@ -45,7 +42,7 @@ Deployment will come at a later date but will be hosted on either Firebase or He
 This project is licensed under the MIT License
 
 ## Acknowledgments
-I would like to thank the following online resources for publishing truly great content that allowed me to further develope my skills as a web developer.
+I would like to thank the following online resources for publishing truly great content that allowed me to further develop my skills as a web developer.
 
 * Traversy Media (MEAN.io Educator)
 * Wes Bos (JS YouTuber)
