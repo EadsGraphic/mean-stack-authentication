@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const config = require("../config/database");
+const jwt = require("jsonwebtoken");
 
 // User Scheme
 const UserSchema = mongoose.Schema({
@@ -28,7 +29,8 @@ module.exports.getUserById = function(id, callback) {
 };
 
 module.exports.getUserByUsername = function(username, callback) {
-  User.findById(query, callback);
+  const query = { username: username };
+  User.findOne(query, callback);
 };
 
 module.exports.addUser = function(newUser, callback) {
@@ -38,5 +40,12 @@ module.exports.addUser = function(newUser, callback) {
       newUser.password = hash;
       newUser.save(callback);
     });
+  });
+};
+
+module.exports.comparePassword = function(canidatePassword, hash, callback) {
+  bcrypt.compare(canidatePassword, hash, function(err, isMatch) {
+    if (err) throw Error;
+    callback(null, isMatch);
   });
 };
