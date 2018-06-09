@@ -1,6 +1,7 @@
 {
-    "workbench.colorTheme": "An Old Hope Classic",
-    "editor.fontSize": 12,
-    "editor.formatOnSave": true,
-    "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "An Old Hope Classic",
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "prettier.singleQuote": true
 }
