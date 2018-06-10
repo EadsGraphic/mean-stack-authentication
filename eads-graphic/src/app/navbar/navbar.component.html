@@ -20,10 +20,18 @@
                     [routerLink]="['/']">Home</a>
             </li>
 
-            <li [routerLinkActive]="['active']"
+            <li *ngIf="authService.loggedIn()"
+                [routerLinkActive]="['active']"
                 [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link"
                     [routerLink]="['/dashboard']">Dashboard</a>
+            </li>
+
+            <li *ngIf="authService.loggedIn()"
+                [routerLinkActive]="['active']"
+                [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link"
+                    [routerLink]="['/profile']">Profile</a>
             </li>
 
             <li [routerLinkActive]="['active']"

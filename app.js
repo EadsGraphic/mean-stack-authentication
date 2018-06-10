@@ -22,7 +22,7 @@ mongoose.connection.on('error', function(err) {
 const app = express();
 const users = require('./routes/users');
 // Port Number
-const port = 3000;
+const port = process.env.port || 8080;
 
 // CORS Middleware
 app.use(cors());
@@ -43,6 +43,11 @@ app.use('/users', users);
 // Index Router
 app.get('/', function(req, res) {
   res.send('Invalid endpoint');
+});
+
+// Catch All Endpoint
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Listen Function
