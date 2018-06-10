@@ -32,6 +32,12 @@
                     [routerLink]="['/login']">Login</a>
             </li>
 
+            <li>
+                <a class="nav-link"
+                    (click)='onLogoutClick()'
+                    href="#">Logout</a>
+            </li>
+
             <li [routerLinkActive]="['active']"
                 [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link"
