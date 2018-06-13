@@ -6,7 +6,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
-// Connect To Database
+// Connect To Database (NEW)
 const db = require('./config/database');
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
@@ -14,13 +14,29 @@ mongoose.Promise = global.Promise;
 mongoose.connect(db.mongoURI, {
         useMongoClient: true
     })
-    .then(() => console.log('Successfully connected to MongoDB...'))
+    .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
+
+// Connect To Database (OLD CODE)
+mongoose.connect(config.database, {
+    useMongoClient: true
+});
+// On Connection
+mongoose.connection.on('connected', () => {
+    console.log('Connected to Database ' + config.database);
+});
+// On Error
+mongoose.connection.on('error', (err) => {
+    console.log('Database error ' + err);
+});
+
 const app = express();
+
 const users = require('./routes/users');
+
 // Port Number
-const port = process.env.port || 8080;
+const port = process.env.PORT || '3000';
 
 // CORS Middleware
 app.use(cors());
