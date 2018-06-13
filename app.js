@@ -7,17 +7,15 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 // Connect To Database
-mongoose.connect(config.database);
-
-// On Connection
-mongoose.connection.on('connected', function() {
-  console.log('Connected to database ' + config.database);
-});
-
-// On Error
-mongoose.connection.on('error', function(err) {
-  console.log('Database Error ' + err);
-});
+const db = require('./config/database');
+// Map global promise - get rid of warning
+mongoose.Promise = global.Promise;
+// Connect to mongoose
+mongoose.connect(db.mongoURI, {
+        useMongoClient: true
+    })
+    .then(() => console.log('Successfully connected to MongoDB...'))
+    .catch(err => console.log(err));
 
 const app = express();
 const users = require('./routes/users');
