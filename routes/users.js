@@ -6,7 +6,7 @@ const config = require("../config/database");
 const User = require("../models/user");
 
 // Register
-router.post("https://eadsgraphic-auth-app.herokuapp.com/register", function(req, res, next) {
+router.post("/register", function(req, res, next) {
     let newUser = new User({
         name: req.body.name,
         email: req.body.email,
@@ -30,7 +30,7 @@ router.post("https://eadsgraphic-auth-app.herokuapp.com/register", function(req,
 });
 
 // Authenticate
-router.post("https://eadsgraphic-auth-app.herokuapp.com/authenticate", function(req, res, next) {
+router.post("/authenticate", function(req, res, next) {
     const username = req.body.username;
     const password = req.body.password;
 
@@ -73,7 +73,7 @@ router.post("https://eadsgraphic-auth-app.herokuapp.com/authenticate", function(
 
 // Profile
 router.get(
-    "https://eadsgraphic-auth-app.herokuapp.com/profile",
+    "/profile",
     passport.authenticate("jwt", {
         session: false
     }),
@@ -85,7 +85,7 @@ router.get(
 );
 
 // Validate
-router.get("https://eadsgraphic-auth-app.herokuapp.com/validate", function(req, res, next) {
+router.get("/validate", function(req, res, next) {
     res.send("validate");
 });
 
