@@ -1,0 +1,22 @@
+// Global Base Application Styles
+@import 'colors';
+@import 'typography';
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
