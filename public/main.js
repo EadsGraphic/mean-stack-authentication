@@ -91,7 +91,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<eg-navbar></eg-navbar>\n<div style=\"margin-top: 72px;\"\n    class=\"container\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<eg-navbar></eg-navbar>\n<div class=\"height-adjust\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n<eg-footer></eg-footer>\n"
 
 /***/ }),
 
@@ -102,7 +102,7 @@ module.exports = "<eg-navbar></eg-navbar>\n<div style=\"margin-top: 72px;\"\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".height-adjust {\n  padding-top: 58px; }\n"
 
 /***/ }),
 
@@ -170,6 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -196,6 +197,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -208,7 +210,8 @@ var AppModule = /** @class */ (function () {
                 _register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"],
-                _profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"]
+                _profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_17__["FooterComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -243,7 +246,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to you personal Dashboard</p>\n"
+module.exports = "<div class=\"container\">\n    <h2 class=\"page-header\">Dashboard</h2>\n    <p>Welcome to you personal Dashboard</p>\n</div>\n"
 
 /***/ }),
 
@@ -293,6 +296,69 @@ var DashboardComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], DashboardComponent);
     return DashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/footer/footer.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"footer\">\n    <div class=\"container\">\n        <div class=\"row align-items-center text-center\">\n            <div class=\"col-md-auto\">\n                Project maintained by\n                <a href=\"https://www.linkedin.com/in/teads/\">Tyler Eads</a>\n                ・ License: MIT\n            </div>\n            <div class=\"col-md-auto\">\n                <ul class=\"footer-ul\">\n                    <li>\n                        <a target=\"_blank\"\n                            href=\"https://github.com/EadsGraphic\"><i class=\"ion ion-social-github\"></i></a>\n                    </li>\n                    <li>\n                        <a target=\"_blank\"\n                            href=\"https://www.instagram.com/eadsgraphic/\"><i class=\"ion ion-social-instagram\"></i>\n                        </a>\n                    </li>\n                    <li>\n                        <a target=\"_blank\"\n                            href=\"https://dribbble.com/meads\"><i class=\"ion ion-social-dribbble\"></i></a>\n                    </li>\n                    <li>\n                        <a target=\"_blank\"\n                            href=\"https://www.linkedin.com/in/teads/\"><i class=\"ion ion-social-linkedin\"></i></a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>\n"
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/footer/footer.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/footer/footer.component.ts ***!
+  \********************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'eg-footer',
+            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/footer/footer.component.html"),
+            styles: [__webpack_require__(/*! ./footer.component.scss */ "./src/app/footer/footer.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FooterComponent);
+    return FooterComponent;
 }());
 
 
@@ -357,7 +423,7 @@ var AuthGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n    <h1>EadsGraphic</h1>\n    <p class=\"Lead\">Welcome To EadsGraphic</p>\n    <div>\n        <a href=\"\"\n            class=\"btn btn-primary\"\n            [routerLink]=\"['/register']\">Register</a>\n\n        <a href=\"\"\n            class=\"btn btn-primary\"\n            [routerLink]=\"['/login']\">Login</a>\n    </div>\n</div>\n\n<div class=\"row text-center\">\n    <div class=\"col-md-4\"\n        style=\"background-color: red;\">\n        <h3>Topic #1</h3>\n        <p>300 words of text</p>\n    </div>\n\n    <div class=\"col-md-4\"\n        style=\"background-color: red;\">\n        <h3>Topic #1</h3>\n        <p>300 words of text</p>\n    </div>\n\n    <div class=\"col-md-4\"\n        style=\"background-color: red;\">\n        <h3>Topic #1</h3>\n        <p>300 words of text</p>\n    </div>\n</div>\n"
+module.exports = "<section class=\"section\">\n    <h2>The mean stack?</h2>\n    <p>\n        The Friendly & Fun Fullstack javascript framework\n    </p>\n    <div class=\"features\">\n        <div class=\"feature\">\n            <div class=\"feature-image\">\n                <img src=\"../../assets/images/landing-page/mongodb-icon.jpg\"\n                    alt=\"\">\n            </div>\n            <div class=\"feature-description\">\n                <h3 class=\"feature-name\">MongoDB</h3>\n                <p>MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.</p>\n                <div class=\"mt-5\">\n                    <a class=\"btn btn-small btn-outline-dark\"\n                        href=\"https://www.mongodb.com/\"\n                        role=\"button\">More <i class=\"ion ion-arrow-right-c\"></i>\n                    </a>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"feature\">\n            <div class=\"feature-image\">\n                <img src=\"../../assets/images/landing-page/expressjs-icon.jpg\"\n                    alt=\"\">\n            </div>\n            <div class=\"feature-description\">\n                <h3 class=\"feature-name\">Express.JS</h3>\n                <p>Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.</p>\n                <div class=\"mt-5\">\n                    <a class=\"btn btn-small btn-outline-dark\"\n                        href=\"https://expressjs.com/\"\n                        role=\"button\">More <i class=\"ion ion-arrow-right-c\"></i>\n                    </a>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"feature\">\n            <div class=\"feature-image\">\n                <img src=\"../../assets/images/landing-page/angular-icon.jpg\"\n                    alt=\"\">\n            </div>\n            <div class=\"feature-description\">\n                <h3 class=\"feature-name\">Angular</h3>\n                <p>Angular is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations.</p>\n                <div class=\"mt-5\">\n                    <a class=\"btn btn-small btn-outline-dark\"\n                        href=\"https://angular.io/\"\n                        role=\"button\">More <i class=\"ion ion-arrow-right-c\"></i>\n                    </a>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"feature\">\n            <div class=\"feature-image\">\n                <img src=\"../../assets/images/landing-page/nodejs-icon.jpg\"\n                    alt=\"\">\n            </div>\n            <div class=\"feature-description\">\n                <h3 class=\"feature-name\">Node.JS</h3>\n                <p>Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code server-side to produce dynamic content before the page is sent to the user's browser.</p>\n                <div class=\"mt-5\">\n                    <a class=\"btn btn-small btn-outline-dark\"\n                        href=\"https://nodejs.org/en/\"\n                        role=\"button\">More <i class=\"ion ion-arrow-right-c\"></i>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n\n<section class=\"section section-action\">\n    <h2 class=\"section-title\">Want to try our app?</h2>\n    <p class=\"section-description\">\n        Test out the full stack application today for free!</p>\n    <div class=\"mt-4\">\n        <a href=\"https://github.com/EadsGraphic/mean-stack-authentication\"\n            class=\"btn btn-green\"\n            target=\"_blank\">Source Code</a>\n        <a class=\"btn btn-outline ml-2\"\n            [routerLink]=\"['/register']\">Register</a>\n    </div>\n</section>\n"
 
 /***/ }),
 
@@ -420,7 +486,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n\n    <div class=\"form-group\">\n        <label for=\"login-form.name\">Username</label>\n        <input type=\"email\"\n            class=\"form-control\"\n            id=\"login-form.username\"\n            aria-describedby=\"usernameHelp\"\n            placeholder=\"Username\"\n            name=\"username\"\n            [(ngModel)]=\"username\">\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"login-form.name\">Password</label>\n        <input type=\"password\"\n            class=\"form-control\"\n            id=\"login-form.password\"\n            aria-describedby=\"passwordHelp\"\n            placeholder=\"Password\"\n            name=\"password\"\n            [(ngModel)]=\"password\">\n    </div>\n\n    <button type=\"submit\"\n        class=\"btn btn-primary\"\n        value=\"Login\">\n        Login\n    </button>\n</form>\n"
+module.exports = "<div class=\"container\">\n    <h2>Login</h2>\n    <form (submit)=\"onLoginSubmit()\">\n\n        <div class=\"form-group\">\n            <label for=\"login-form.name\">Username</label>\n            <input type=\"email\"\n                class=\"form-control\"\n                id=\"login-form.username\"\n                aria-describedby=\"usernameHelp\"\n                placeholder=\"Username\"\n                name=\"username\"\n                [(ngModel)]=\"username\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"login-form.name\">Password</label>\n            <input type=\"password\"\n                class=\"form-control\"\n                id=\"login-form.password\"\n                aria-describedby=\"passwordHelp\"\n                placeholder=\"Password\"\n                name=\"password\"\n                [(ngModel)]=\"password\">\n        </div>\n\n        <button type=\"submit\"\n            class=\"btn btn-primary\"\n            value=\"Login\">\n            Login\n        </button>\n    </form>\n</div>\n"
 
 /***/ }),
 
@@ -520,7 +586,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\"\n        href=\"#\">EadsGraphic</a>\n    <button class=\"navbar-toggler\"\n        type=\"button\"\n        data-toggle=\"collapse\"\n        data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\"\n        aria-expanded=\"false\"\n        aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\"\n        id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/']\">Home</a>\n            </li>\n\n            <li *ngIf=\"authService.loggedIn()\"\n                [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/dashboard']\">Dashboard</a>\n            </li>\n\n            <li *ngIf=\"authService.loggedIn()\"\n                [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/profile']\">Profile</a>\n            </li>\n\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/login']\">Login</a>\n            </li>\n\n            <li>\n                <a class=\"nav-link\"\n                    (click)='onLogoutClick()'\n                    href=\"#\">Logout</a>\n            </li>\n\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/register']\">Register</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-sm navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\"\n        href=\"#\">EadsGraphic</a>\n    <button class=\"navbar-toggler\"\n        type=\"button\"\n        data-toggle=\"collapse\"\n        data-target=\"#navbarsExampleDefault\"\n        aria-controls=\"navbarsExampleDefault\"\n        aria-expanded=\"false\"\n        aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\"\n        id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/']\">Home</a>\n            </li>\n\n            <li *ngIf=\"authService.loggedIn()\"\n                [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/dashboard']\">Dashboard</a>\n            </li>\n\n            <li *ngIf=\"authService.loggedIn()\"\n                [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/profile']\">Profile</a>\n            </li>\n\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/login']\">Login</a>\n            </li>\n\n            <li>\n                <a class=\"nav-link\"\n                    (click)='onLogoutClick()'\n                    href=\"#\">Logout</a>\n            </li>\n\n            <li [routerLinkActive]=\"['active']\"\n                [routerLinkActiveOptions]=\"{exact: true}\">\n                <a class=\"nav-link\"\n                    [routerLink]=\"['/register']\">Register</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -603,7 +669,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n    <h2 class=\"page-header\">{{user.name}}</h2>\n    <ul class=\"list-group\">\n        <li class=\"list-group-item\">Username: {{user.username}}</li>\n        <li class=\"list-group-item\">Email: {{user.email}}</li>\n    </ul>\n</div>\n"
+module.exports = "<div class=\"container\">\n    <div *ngIf=\"user\">\n        <h2 class=\"page-header\">{{user.name}}</h2>\n        <ul class=\"list-group\">\n            <li class=\"list-group-item\">Username: {{user.username}}</li>\n            <li class=\"list-group-item\">Email: {{user.email}}</li>\n        </ul>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -679,7 +745,7 @@ var ProfileComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"register-form.name\">Name</label>\n        <input type=\"email\"\n            class=\"form-control\"\n            id=\"register-form.name\"\n            aria-describedby=\"nameHelp\"\n            placeholder=\"Name\"\n            name=\"name\"\n            [(ngModel)]=\"name\">\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"register-form.name\">Username</label>\n        <input type=\"email\"\n            class=\"form-control\"\n            id=\"register-form.username\"\n            aria-describedby=\"usernameHelp\"\n            placeholder=\"Username\"\n            name=\"username\"\n            [(ngModel)]=\"username\">\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"register-form.name\">Email</label>\n        <input type=\"email\"\n            class=\"form-control\"\n            id=\"register-form.email\"\n            aria-describedby=\"emailHelp\"\n            placeholder=\"Email\"\n            name=\"email\"\n            [(ngModel)]=\"email\">\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"register-form.name\">Password</label>\n        <input type=\"password\"\n            class=\"form-control\"\n            id=\"register-form.password\"\n            aria-describedby=\"passwordHelp\"\n            placeholder=\"Password\"\n            name=\"password\"\n            [(ngModel)]=\"password\">\n    </div>\n\n    <button type=\"submit\"\n        class=\"btn btn-primary\"\n        value=\"Submit\">\n        submit\n    </button>\n\n\n\n</form>\n"
+module.exports = "<div class=\"container\">\n    <h2>Register</h2>\n    <form (submit)=\"onRegisterSubmit()\">\n        <div class=\"form-group\">\n            <label for=\"register-form.name\">Name</label>\n            <input type=\"email\"\n                class=\"form-control\"\n                id=\"register-form.name\"\n                aria-describedby=\"nameHelp\"\n                placeholder=\"Name\"\n                name=\"name\"\n                [(ngModel)]=\"name\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"register-form.name\">Username</label>\n            <input type=\"email\"\n                class=\"form-control\"\n                id=\"register-form.username\"\n                aria-describedby=\"usernameHelp\"\n                placeholder=\"Username\"\n                name=\"username\"\n                [(ngModel)]=\"username\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"register-form.name\">Email</label>\n            <input type=\"email\"\n                class=\"form-control\"\n                id=\"register-form.email\"\n                aria-describedby=\"emailHelp\"\n                placeholder=\"Email\"\n                name=\"email\"\n                [(ngModel)]=\"email\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"register-form.name\">Password</label>\n            <input type=\"password\"\n                class=\"form-control\"\n                id=\"register-form.password\"\n                aria-describedby=\"passwordHelp\"\n                placeholder=\"Password\"\n                name=\"password\"\n                [(ngModel)]=\"password\">\n        </div>\n\n        <button type=\"submit\"\n            class=\"btn btn-primary\"\n            value=\"Submit\">\n            submit\n        </button>\n    </form>\n</div>\n"
 
 /***/ }),
 
