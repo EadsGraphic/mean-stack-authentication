@@ -1,54 +1,82 @@
-<div class="container">
-    <h2>Register</h2>
-    <form (submit)="onRegisterSubmit()">
-        <div class="form-group">
-            <label for="register-form.name">Name</label>
-            <input type="email"
-                class="form-control"
-                id="register-form.name"
-                aria-describedby="nameHelp"
-                placeholder="Name"
-                name="name"
-                [(ngModel)]="name">
-        </div>
+<div class="page">
+    <div class="page-single">
+        <div class="container">
+            <div class="row">
+                <div class="col col-login mx-auto">
 
-        <div class="form-group">
-            <label for="register-form.name">Username</label>
-            <input type="email"
-                class="form-control"
-                id="register-form.username"
-                aria-describedby="usernameHelp"
-                placeholder="Username"
-                name="username"
-                [(ngModel)]="username">
-        </div>
+                    <form class="card"
+                        (submit)="onRegisterSubmit()">
+                        <div class="card-body p-6">
+                            <div class="card-title">Register</div>
 
-        <div class="form-group">
-            <label for="register-form.name">Email</label>
-            <input type="email"
-                class="form-control"
-                id="register-form.email"
-                aria-describedby="emailHelp"
-                placeholder="Email"
-                name="email"
-                [(ngModel)]="email">
-        </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="register-form.name">Name</label>
+                                <input type="email"
+                                    class="form-control"
+                                    id="register-form.name"
+                                    aria-describedby="nameHelp"
+                                    placeholder="Name"
+                                    name="name"
+                                    [(ngModel)]="name">
+                            </div>
 
-        <div class="form-group">
-            <label for="register-form.name">Password</label>
-            <input type="password"
-                class="form-control"
-                id="register-form.password"
-                aria-describedby="passwordHelp"
-                placeholder="Password"
-                name="password"
-                [(ngModel)]="password">
-        </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="register-form.name">Username</label>
+                                <input type="email"
+                                    class="form-control"
+                                    id="register-form.username"
+                                    aria-describedby="usernameHelp"
+                                    placeholder="Username"
+                                    name="username"
+                                    [(ngModel)]="username">
+                            </div>
 
-        <button type="submit"
-            class="btn btn-primary"
-            value="Submit">
-            submit
-        </button>
-    </form>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="register-form.name">Email</label>
+                                <input type="email"
+                                    class="form-control"
+                                    id="register-form.email"
+                                    aria-describedby="emailHelp"
+                                    placeholder="Email"
+                                    name="email"
+                                    [(ngModel)]="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="register-form.name">Password</label>
+                                <input type="password"
+                                    class="form-control"
+                                    id="register-form.password"
+                                    aria-describedby="passwordHelp"
+                                    placeholder="Password"
+                                    name="password"
+                                    [(ngModel)]="password">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input" />
+                                    <span class="custom-control-label">Agree the <a href="terms.html">terms and policy</a></span>
+                                </label>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit"
+                                    class="btn btn-primary btn-block">Create new account</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center text-muted">
+                        Already have account?
+                        <a [routerLink]="['/login']">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
