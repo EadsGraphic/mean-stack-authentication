@@ -1,0 +1,28 @@
+@import '../../assets/scss/colors';
+
+footer {
+    background: linear-gradient(315deg, #10192a 0, #161d29 100%);
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 80px 0;
+}
+
+footer li {
+    list-style: none;
+    line-height: 30px;
+}
+
+footer a {
+    font-weight: 400;
+    color: $white;
+    font-size: 1.4rem;
+}
+
+
+.disclaimer {
+    font-size: 1.2rem;
+    color: $white;
+}
