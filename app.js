@@ -1,4 +1,9 @@
+// *******************************
+//       Express.js Imports
+// *******************************
+
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -6,33 +11,24 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
-// Connect To Database (NEW)
+// Connect To MongoDB
+// Database Config File (Switch to Dev or Prod)
 const db = require('./config/database');
-// Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
-// Connect to mongoose
-mongoose.connect(db.mongoURI, {
+
+// Connect to MongooseODM to MongoDB
+mongoose.connect(db.database, {
         useMongoClient: true
     })
-    .then(() => console.log('MongoDB Connected...'))
+    .then(() => console.log('Successfully Connected'))
     .catch(err => console.log(err));
 
 
-// Connect To Database (OLD CODE)
-mongoose.connect(config.database, {
-    useMongoClient: true
-});
-// On Connection
-mongoose.connection.on('connected', () => {
-    console.log('Connected to Database ' + config.database);
-});
-// On Error
-mongoose.connection.on('error', (err) => {
-    console.log('Database error ' + err);
-});
-
+// Initializes Express.js
 const app = express();
+app.use(helmet());
 
+// Users Routes Module
 const users = require('./routes/users');
 
 // Port Number
@@ -47,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // BodyParser Middleware
 app.use(bodyParser.json());
 
-// Passport Middleware
+// Passport.js Middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -56,15 +52,15 @@ app.use('/users', users);
 
 // Index Router
 app.get('/', function(req, res) {
-  res.send('Invalid endpoint');
+    res.send('Invalid endpoint');
 });
 
 // Catch All Endpoint
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Listen Function
 app.listen(port, function() {
-  console.log('Server started on port ' + port);
+    console.log('Server started on port ' + port);
 });
